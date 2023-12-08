@@ -11,6 +11,8 @@ body {
 
     justify-content: center;
     align-items: center;
+
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .etch-a-sketch {
@@ -31,6 +33,18 @@ body {
     justify-content: center;
     align-items: center;
     gap: 1rem;
+}
+
+.slider-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.dimensions-text {
+    color: white;
+    font-weight: bold;
 }
 
 .controls > label {
@@ -68,7 +82,7 @@ body {
 
 .square {
     background-color: rgb(255, 255, 255);
-    pointer-events: none;
+    /* pointer-events: none; */
 }
 
 .square.filled {

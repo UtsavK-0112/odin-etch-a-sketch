@@ -10,14 +10,21 @@
     <body>
         <div class="etch-a-sketch">
             <div class="controls">
-                <input
-                    type="range"
-                    name="width-slider"
-                    id="grid-width-slider"
-                    min="8"
-                    max="128"
-                    value="16"
-                />
+                <div class="slider-container">
+                    <span class="dimensions-text">
+                        <span class="grid-width">16</span> x
+                        <span class="grid-height">32</span>
+                    </span>
+
+                    <input
+                        type="range"
+                        name="width-slider"
+                        id="grid-width-slider"
+                        min="8"
+                        max="128"
+                        value="16"
+                    />
+                </div>
             </div>
             <div class="grid-container"></div>
             <div class="logo-container">
