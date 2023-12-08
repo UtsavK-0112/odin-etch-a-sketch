@@ -1,0 +1,74 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.etch-a-sketch {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.controls {
+    width: 25rem;
+    position: relative;
+    top: 1.5rem;
+    background-color: red;
+    border: 1rem solid red;
+    border-radius: 20px 20px 0 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.controls > label {
+    color: white;
+}
+
+.controls #grid-width-field,
+.controls #grid-height-field {
+    width: 4rem;
+    text-align: center;
+    border: none;
+    border-radius: 20px;
+    padding: 0.5rem;
+}
+
+.controls input[type="button"] {
+    text-align: center;
+    border: 4px solid orange;
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+
+    background-color: yellow;
+}
+
+.grid-container {
+    display: grid;
+
+    background-color: gray;
+    gap: 0.1rem;
+
+    border: 2rem solid red;
+    border-radius: 20px;
+}
+
+.square {
+    background-color: rgb(255, 255, 255);
+}
+
+.square.filled {
+    background-color: gray;
+}
