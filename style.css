@@ -17,15 +17,15 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    background-color: red;
+    border-radius: 20px;
 }
 
 .controls {
-    width: 25rem;
+    width: 100%;
     position: relative;
-    top: 1.5rem;
-    background-color: red;
-    border: 1rem solid red;
-    border-radius: 20px 20px 0 0;
+    padding-block: 1rem;
 
     display: flex;
     justify-content: center;
@@ -57,18 +57,31 @@ body {
 
 .grid-container {
     display: grid;
+    width: 80vw;
+    height: 40vw;
 
     background-color: gray;
     gap: 0.1rem;
 
-    border: 2rem solid red;
-    border-radius: 20px;
+    margin-inline: 2rem;
 }
 
 .square {
     background-color: rgb(255, 255, 255);
+    pointer-events: none;
 }
 
 .square.filled {
     background-color: gray;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    margin-block: 1rem;
+    width: 8rem;
 }

@@ -10,13 +10,23 @@
     <body>
         <div class="etch-a-sketch">
             <div class="controls">
-                <label for="grid-width-field">X</label>
-                <input id="grid-width-field" type="number" value="32" />
-                <label for="grid-height-field">Y</label>
-                <input id="grid-height-field" type="number" value="32" />
-                <input id="refresh-button" type="button" value="Refresh" />
+                <input
+                    type="range"
+                    name="width-slider"
+                    id="grid-width-slider"
+                    min="8"
+                    max="128"
+                    value="16"
+                />
             </div>
             <div class="grid-container"></div>
+            <div class="logo-container">
+                <img
+                    class="logo"
+                    src="etch-a-sketch-logo.png"
+                    alt="etch-a-sketch-logo"
+                />
+            </div>
         </div>
     </body>
 </html>

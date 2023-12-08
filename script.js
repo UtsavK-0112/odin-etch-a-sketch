@@ -1,17 +1,15 @@
 const gridContainer = document.querySelector(".grid-container");
-const gridWidthField = document.querySelector("#grid-width-field");
-const gridHeightField = document.querySelector("#grid-height-field");
+const gridWidthSlider = document.querySelector("#grid-width-slider");
 
-const refreshButton = document.querySelector("#refresh-button");
-
-let gridWidth = 32;
-let gridHeight = 32;
+let gridWidth = 16;
+let gridHeight = 8;
 
 function purgeGridContainer() {
-    children = gridContainer.children;
-    for (child of children) {
+    children = Array.from(gridContainer.children);
+
+    children.forEach((child) => {
         gridContainer.removeChild(child);
-    }
+    });
 }
 
 function createGrid() {
@@ -21,8 +19,6 @@ function createGrid() {
         gridContainer.appendChild(square);
     }
 
-    gridContainer.style.width = `${gridWidth * 15}px`;
-    gridContainer.style.height = `${gridHeight * 15}px`;
     gridContainer.style.gridTemplateColumns = `repeat(${gridWidth}, 1fr)`;
     gridContainer.style.gridTemplateRows = `repeat(${gridHeight}, 1fr)`;
 }
@@ -32,7 +28,6 @@ createGrid();
 gridContainer.addEventListener(
     "mouseover",
     (event) => {
-        console.log(event.target);
         if (event.target.classList.contains("square")) {
             const square = event.target;
             square.classList.add("filled");
@@ -41,9 +36,10 @@ gridContainer.addEventListener(
     false
 );
 
-refreshButton.addEventListener("click", (event) => {
-    gridWidth = gridWidthField.value;
-    gridHeight = gridHeightField.value;
+gridWidthSlider.addEventListener("input", (event) => {
+    gridHeight = Math.ceil(gridWidthSlider.value / 2);
+    gridWidth = gridHeight * 2;
+
     purgeGridContainer();
     createGrid();
 });
