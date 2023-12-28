@@ -10,20 +10,30 @@
     <body>
         <div class="etch-a-sketch">
             <div class="controls">
-                <div class="slider-container">
-                    <span class="dimensions-text">
-                        <span class="grid-width">16</span> x
-                        <span class="grid-height">32</span>
-                    </span>
-
-                    <input
-                        type="range"
-                        name="width-slider"
-                        id="grid-width-slider"
-                        min="8"
-                        max="128"
-                        value="16"
-                    />
+                <div class="--controls-left">
+                    <div class="color-picker-container">
+                        <label for="color-picker" ="pen-color">#808080</label>
+                        <input type="color" id="color-picker" />
+                    </div>
+                </div>
+                <div class="--controls-centre">
+                    <div class="slider-container">
+                        <label for="grid-width-slider" class="dimensions-label">
+                            <span class="grid-width">16</span> x
+                            <span class="grid-height">32</span>
+                        </label>
+                        <input
+                            type="range"
+                            name="width-slider"
+                            id="grid-width-slider"
+                            min="8"
+                            max="128"
+                            value="16"
+                        />
+                    </div>
+                </div>
+                <div class="--controls-right">
+                    <input id="clear-button" type="button" value="Clear" />
                 </div>
             </div>
             <div class="grid-container"></div>
