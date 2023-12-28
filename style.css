@@ -72,7 +72,10 @@ body {
 .grid-container {
     display: grid;
     width: 80vw;
+    max-width: 1000px;
+
     height: 40vw;
+    max-height: 500px;
 
     background-color: gray;
     gap: 0.1rem;
