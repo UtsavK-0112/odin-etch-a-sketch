@@ -9,8 +9,13 @@ const gridHeightText = document.querySelector(".grid-height");
 const colorPicker = document.querySelector("#color-picker");
 const colorPickerText = document.querySelector(".pen-color");
 
+// OTHER CONTROLS
+const clearButton = document.querySelector("#clear-button");
+
 let gridWidth = 16;
 let gridHeight = 8;
+
+// FUNCTIONS
 
 function purgeGridContainer() {
     children = Array.from(gridContainer.children);
@@ -31,6 +36,8 @@ function createGrid() {
     gridContainer.style.gridTemplateColumns = `repeat(${gridWidth}, 1fr)`;
     gridContainer.style.gridTemplateRows = `repeat(${gridHeight}, 1fr)`;
 }
+
+// EVENT LISTENERS
 
 gridContainer.addEventListener(
     "mouseover",
@@ -58,5 +65,12 @@ gridWidthSlider.addEventListener("input", () => {
 colorPicker.addEventListener("input", () => {
     colorPickerText.textContent = colorPicker.value;
 });
+
+clearButton.addEventListener("click", () => {
+    purgeGridContainer();
+    createGrid();
+});
+
+// SET UP
 
 createGrid();
