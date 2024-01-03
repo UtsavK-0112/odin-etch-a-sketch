@@ -11,6 +11,12 @@ const colorPickerText = document.querySelector(".pen-color");
 
 // OTHER CONTROLS
 const clearButton = document.querySelector("#clear-button");
+const colorButton = {
+    gray: document.querySelector("#gray-button"),
+    red: document.querySelector("#red-button"),
+    blue: document.querySelector("#blue-button"),
+    yellow: document.querySelector("#yellow-button"),
+};
 
 let gridWidth = 16;
 let gridHeight = 8;
