@@ -30,6 +30,22 @@ body {
     box-shadow: 0px 25px 50px rgb(37, 30, 21);
 }
 
+.square {
+    background-color: rgb(255, 255, 255);
+    user-select: none;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    margin-block: 1rem;
+    width: 8rem;
+}
+
 .controls {
     width: 100%;
     position: relative;
@@ -58,6 +74,7 @@ body {
     align-items: center;
     gap: 1rem;
 }
+
 #color-picker {
     background-color: white;
     padding: 0;
@@ -74,7 +91,38 @@ body {
     color: white;
 }
 
-.controls input[type="button"] {
+.color-button {
+    width: 2rem;
+    height: 2rem;
+    border: 3px solid darkgoldenrod;
+    border-radius: 10px;
+}
+
+.controls input:not(input[type="range"]) {
+    transition: border 100ms ease;
+}
+
+.controls input:not(input[type="range"]):hover {
+    border: 3px solid rgb(12, 138, 255) !important;
+}
+
+#gray-button {
+    background-color: dimgray;
+}
+
+#red-button {
+    background-color: red;
+}
+
+#blue-button {
+    background-color: blue;
+}
+
+#yellow-button {
+    background-color: yellow;
+}
+
+#clear-button {
     text-align: center;
     border: 3px solid darkgoldenrod;
     border-radius: 16px;
@@ -97,20 +145,4 @@ body {
     gap: 0.1rem;
 
     margin-inline: 2rem;
-}
-
-.square {
-    background-color: rgb(255, 255, 255);
-    user-select: none;
-}
-
-.logo-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.logo {
-    margin-block: 1rem;
-    width: 8rem;
 }
