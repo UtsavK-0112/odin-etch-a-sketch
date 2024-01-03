@@ -96,6 +96,7 @@ body {
     height: 2rem;
     border: 3px solid darkgoldenrod;
     border-radius: 10px;
+    text-indent: -9999px; /* Hides value text */
 }
 
 .controls input:not(input[type="range"]) {
@@ -107,7 +108,7 @@ body {
 }
 
 #gray-button {
-    background-color: dimgray;
+    background-color: #444444;
 }
 
 #red-button {

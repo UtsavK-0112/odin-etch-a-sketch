@@ -11,7 +11,7 @@ const colorPickerText = document.querySelector(".pen-color");
 
 // OTHER CONTROLS
 const clearButton = document.querySelector("#clear-button");
-const colorButton = {
+const colorButtons = {
     gray: document.querySelector("#gray-button"),
     red: document.querySelector("#red-button"),
     blue: document.querySelector("#blue-button"),
@@ -75,6 +75,15 @@ colorPicker.addEventListener("input", () => {
 clearButton.addEventListener("click", () => {
     purgeGridContainer();
     createGrid();
+});
+
+Object.keys(colorButtons).forEach((key) => {
+    button = colorButtons[key];
+    console.log(button);
+    button.addEventListener("click", (event) => {
+        colorPicker.value = event.target.value;
+        colorPickerText.textContent = colorPicker.value;
+    });
 });
 
 // SET UP
