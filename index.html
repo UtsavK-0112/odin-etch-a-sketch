@@ -14,6 +14,12 @@
                     <div class="color-picker-container">
                         <input
                             type="button"
+                            value="#ffffff"
+                            id="white-button"
+                            class="color-button"
+                        />
+                        <input
+                            type="button"
                             value="#444444"
                             id="gray-button"
                             class="color-button"
@@ -60,6 +66,34 @@
                 </div>
                 <div class="--controls-right">
                     <input id="clear-button" type="button" value="Clear" />
+                    <label for="none-mode-radio"
+                        >None
+                        <input
+                            type="radio"
+                            name="mode-selector"
+                            id="none-color-mode-radio"
+                            value="none"
+                        />
+                    </label>
+                    <label for="random-color-mode-radio"
+                        >Random
+                        <input
+                            type="radio"
+                            name="mode-selector"
+                            id="random-mode-radio"
+                            value="random"
+                        />
+                    </label>
+
+                    <label for="rainbow-mode-radio"
+                        >Rainbow
+                        <input
+                            type="radio"
+                            name="mode-selector"
+                            id="rainbow-mode-radio"
+                            value="rainbow"
+                        />
+                    </label>
                 </div>
             </div>
             <div class="grid-container"></div>

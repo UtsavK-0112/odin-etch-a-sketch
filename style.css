@@ -58,8 +58,12 @@ body {
 }
 
 .--controls-left {
-    display: flex;
     justify-content: right;
+}
+.--controls-left,
+.--controls-right {
+    display: flex;
+    gap: 1.5rem;
 }
 
 .slider-container {
@@ -89,6 +93,9 @@ body {
 .controls label {
     font-weight: bold;
     color: white;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .color-button {
